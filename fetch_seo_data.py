@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+GSC (Search Console) 近30天搜索词 + GA4 近30天流量 → JSON
+环境变量:
+  GOOGLE_SERVICE_ACCOUNT_JSON  service account 密钥 JSON 全文
+  SEARCH_CONSOLE_SITE_URL      GSC 资源，如 sc-domain:example.com 或 https://example.com/
+  GA4_PROPERTY_ID              可选，GA4 数字 property id；缺省则跳过 GA4
+输出:
+  data/seo-data-YYYY-MM-DD.json   当日快照
+  data/latest.json                最新快照（覆盖写）
+"""
+
+import json
+import os
+import sys
+from datetime import date, datetime, timedelta, timezone
+from pathlib import Path
+
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+from google.analytics.data_v1beta import BetaAnalyticsDataClient
+from google.analytics.data_v1beta.types import (
+    DateRange,
+    Dimension,
+    Metric,
+    OrderBy,
+    RunReportRequest,
+)
+
+SCOPES = [
+    "https://www.googleapis.com/auth/webmasters.readonly",
+    "https://www.googleapis.com/auth/analytics.readonly",
+]
+DAYS = 30
+OUT_DIR = Path("data")
+GSC_ROW_LIMIT = 25000
+
+
+def fail(msg):
+    print(f"[ERROR] {msg}", file=sys.stderr)
+    sys.exit(1)
+
+
+def load_credentials():
+    raw = os.environ.get("GOOGLE_SERVICE_ACCOUNT_JSON", "").strip()
+    if not raw:
+        fail("缺少环境变量 GOOGLE_SERVICE_ACCOUNT_JSON")
+    try:
+        info = json.loads(raw)
+    except json.JSONDecodeError:
+        fail("GOOGLE_SERVICE_ACCOUNT_JSON 不是合法 JSON（检查是否有多余换行/引号）")
+    return service_account.Credentials.from_service_account_info(info, scopes=SCOPES)
+
+
+def date_window(days=DAYS):
+    # GSC 数据通常 T+2，取完整已结算区间更稳
+    end = date.today() - timedelta(days=1)
+    start = end - timedelta(days=days - 1)
+    return start.isoformat(), end.isoformat()
+
+
+# ---------------- GSC ----------------
+def gsc_query(svc, site, start, end, dimensions):
+    rows, start_row = [], 0
+    while True:
+        body = {
+            "startDate": start,
+            "endDate": end,
+            "dimensions": dimensions,
+            "rowLimit": GSC_ROW_LIMIT,
+            "startRow": start_row,
+            "dataState": "final",
+        }
+        resp = svc.searchanalytics().query(siteUrl=site, body=body).execute()
+        batch = resp.get("rows", [])
+        rows.extend(batch)
+        if len(batch) < GSC_ROW_LIMIT:
+            break
+        start_row += GSC_ROW_LIMIT
+    out = []
+    for r in rows:
+        out.append(
+            {
+                "keys": r.get("keys", []),
+                "clicks": r.get("clicks", 0),
+                "impressions": r.get("impressions", 0),
+                "ctr": round(r.get("ctr", 0) * 100, 2),
+                "position": round(r.get("position", 0), 1),
+            }
+        )
+    return out
+
+
+def fetch_gsc(creds, site, start, end):
+    svc = build("searchconsole", "v1", credentials=creds, cache_discovery=False)
+    print(f"[GSC] {site} {start} ~ {end}")
+    queries = gsc_query(svc, site, start, end, ["query", "page"])
+    countries = gsc_query(svc, site, start, end, ["country"])
+    devices = gsc_query(svc, site, start, end, ["device"])
+    total_clicks = sum(q["clicks"] for q in countries)
+    total_impr = sum(q["impressions"] for q in countries)
+    return {
+        "site": site,
+        "start_date": start,
+        "end_date": end,
+        "totals": {
+            "clicks": total_clicks,
+            "impressions": total_impr,
+            "ctr": round(total_clicks / total_impr * 100, 2) if total_impr else 0,
+        },
+        "query_page_count": len(queries),
+        "queries": queries,
+        "countries": countries,
+        "devices": devices,
+    }
+
+
+# ---------------- GA4 ----------------
+def ga4_report(client, prop, start, end, dimensions, metrics, limit=100, order_metric=None):

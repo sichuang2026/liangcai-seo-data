@@ -32,7 +32,7 @@ SCOPES = [
     "https://www.googleapis.com/auth/webmasters.readonly",
     "https://www.googleapis.com/auth/analytics.readonly",
 ]
-DAYS = 30
+DAYS = int(os.environ.get("LOOKBACK_DAYS", "90"))
 OUT_DIR = Path("data")
 GSC_ROW_LIMIT = 25000
 
@@ -96,6 +96,9 @@ def gsc_query(svc, site, start, end, dimensions):
 def fetch_gsc(creds, site, start, end):
     svc = build("searchconsole", "v1", credentials=creds, cache_discovery=False)
     print(f"[GSC] {site} {start} ~ {end}")
+    # 三份报表分工：query 单独看词量；page 单独看单页 CTR；query+page 看落地匹配
+    queries_only = gsc_query(svc, site, start, end, ["query"])
+    pages_only = gsc_query(svc, site, start, end, ["page"])
     queries = gsc_query(svc, site, start, end, ["query", "page"])
     countries = gsc_query(svc, site, start, end, ["country"])
     devices = gsc_query(svc, site, start, end, ["device"])
@@ -111,6 +114,10 @@ def fetch_gsc(creds, site, start, end):
             "ctr": round(total_clicks / total_impr * 100, 2) if total_impr else 0,
         },
         "query_page_count": len(queries),
+        "query_count": len(queries_only),
+        "page_count": len(pages_only),
+        "queries_only": queries_only,
+        "pages_only": pages_only,
         "queries": queries,
         "countries": countries,
         "devices": devices,
@@ -118,7 +125,7 @@ def fetch_gsc(creds, site, start, end):
 
 
 # ---------------- GA4 ----------------
-def ga4_report(client, prop, start, end, dimensions, metrics, limit=100, order_metric=None):
+def ga4_report(client, prop, start, end, dimensions, metrics, limit=100, order_metric=None, order_dim=None):
     req = RunReportRequest(
         property=f"properties/{prop}",
         date_ranges=[DateRange(start_date=start, end_date=end)],
@@ -126,7 +133,12 @@ def ga4_report(client, prop, start, end, dimensions, metrics, limit=100, order_m
         metrics=[Metric(name=m) for m in metrics],
         limit=limit,
     )
-    if order_metric:
+    if order_dim:
+        # 日期是维度不是指标，必须走 DimensionOrderBy，按时间升序
+        req.order_bys = [
+            OrderBy(dimension=OrderBy.DimensionOrderBy(dimension_name=order_dim), desc=False)
+        ]
+    elif order_metric:
         req.order_bys = [
             OrderBy(metric=OrderBy.MetricOrderBy(metric_name=order_metric), desc=True)
         ]
@@ -150,7 +162,7 @@ def fetch_ga4(creds, prop, start, end):
     print(f"[GA4] property {prop} {start} ~ {end}")
     core = ["sessions", "totalUsers", "screenPageViews", "engagementRate",
             "averageSessionDuration", "conversions"]
-    daily = ga4_report(client, prop, start, end, ["date"], core, limit=DAYS + 5, order_metric="date")
+    daily = ga4_report(client, prop, start, end, ["date"], core, limit=DAYS + 5, order_dim="date")
     channels = ga4_report(client, prop, start, end, ["sessionDefaultChannelGroup"], core,
                           limit=20, order_metric="sessions")
     pages = ga4_report(client, prop, start, end, ["pagePath"], core, limit=50, order_metric="screenPageViews")

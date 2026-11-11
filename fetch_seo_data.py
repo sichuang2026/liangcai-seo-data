@@ -80,9 +80,10 @@ def gsc_query(svc, site, start, end, dimensions):
         start_row += GSC_ROW_LIMIT
     out = []
     for r in rows:
+        keys = r.get("keys", [])
         out.append(
             {
-                "keys": r.get("keys", []),
+                "keys": keys,
                 "clicks": r.get("clicks", 0),
                 "impressions": r.get("impressions", 0),
                 "ctr": round(r.get("ctr", 0) * 100, 2),
@@ -118,3 +119,99 @@ def fetch_gsc(creds, site, start, end):
 
 # ---------------- GA4 ----------------
 def ga4_report(client, prop, start, end, dimensions, metrics, limit=100, order_metric=None):
+    req = RunReportRequest(
+        property=f"properties/{prop}",
+        date_ranges=[DateRange(start_date=start, end_date=end)],
+        dimensions=[Dimension(name=d) for d in dimensions],
+        metrics=[Metric(name=m) for m in metrics],
+        limit=limit,
+    )
+    if order_metric:
+        req.order_bys = [
+            OrderBy(metric=OrderBy.MetricOrderBy(metric_name=order_metric), desc=True)
+        ]
+    resp = client.run_report(req)
+    rows = []
+    for row in resp.rows:
+        item = {"dimensions": [d.value for d in row.dimension_values]}
+        item["metrics"] = {}
+        for i, m in enumerate(metrics):
+            v = row.metric_values[i].value
+            try:
+                item["metrics"][m] = float(v)
+            except ValueError:
+                item["metrics"][m] = v
+        rows.append(item)
+    return rows
+
+
+def fetch_ga4(creds, prop, start, end):
+    client = BetaAnalyticsDataClient(credentials=creds)
+    print(f"[GA4] property {prop} {start} ~ {end}")
+    core = ["sessions", "totalUsers", "screenPageViews", "engagementRate",
+            "averageSessionDuration", "conversions"]
+    daily = ga4_report(client, prop, start, end, ["date"], core, limit=DAYS + 5, order_metric="date")
+    channels = ga4_report(client, prop, start, end, ["sessionDefaultChannelGroup"], core,
+                          limit=20, order_metric="sessions")
+    pages = ga4_report(client, prop, start, end, ["pagePath"], core, limit=50, order_metric="screenPageViews")
+    source_medium = ga4_report(client, prop, start, end, ["sessionSourceMedium"], core,
+                               limit=50, order_metric="sessions")
+    return {
+        "property_id": prop,
+        "start_date": start,
+        "end_date": end,
+        "daily": daily,
+        "by_channel": channels,
+        "top_pages": pages,
+        "by_source_medium": source_medium,
+    }
+
+
+def main():
+    creds = load_credentials()
+    site = os.environ.get("SEARCH_CONSOLE_SITE_URL", "").strip()
+    prop = os.environ.get("GA4_PROPERTY_ID", "").strip()
+
+    if not site:
+        fail("缺少环境变量 SEARCH_CONSOLE_SITE_URL")
+
+    start, end = date_window()
+    payload = {
+        "generated_at": datetime.now(timezone.utc).astimezone(
+            timezone(timedelta(hours=8))).isoformat(),
+        "range_days": DAYS,
+    }
+
+    errors = []
+    try:
+        payload["gsc"] = fetch_gsc(creds, site, start, end)
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"GSC: {type(e).__name__}: {e}")
+        payload["gsc"] = {"error": str(e)}
+
+    if prop:
+        try:
+            payload["ga4"] = fetch_ga4(creds, prop, start, end)
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"GA4: {type(e).__name__}: {e}")
+            payload["ga4"] = {"error": str(e)}
+    else:
+        payload["ga4"] = {"skipped": "GA4_PROPERTY_ID 未配置"}
+        print("[WARN] GA4_PROPERTY_ID 未配置，跳过 GA4")
+
+    if errors:
+        payload["errors"] = errors
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    today_path = OUT_DIR / f"seo-data-{date.today().isoformat()}.json"
+    for p in (today_path, OUT_DIR / "latest.json"):
+        p.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"[OK] 写入 {p}")
+
+    # 数据源全挂则让 Actions 失败，避免静默空跑
+    if errors and not payload.get("gsc", {}).get("queries") and not payload.get("ga4", {}).get("daily"):
+        fail("所有数据源均失败：" + " | ".join(errors))
+
+
+if __name__ == "__main__":
+    main()

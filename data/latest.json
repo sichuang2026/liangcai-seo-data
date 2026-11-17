@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-11-16T08:44:10.813555+08:00",
+  "generated_at": "2026-11-17T08:35:59.425539+08:00",
   "range_days": 90,
   "gsc": {
     "site": "https://www.liangcaieyewear.com/",
-    "start_date": "2026-08-18",
-    "end_date": "2026-11-15",
+    "start_date": "2026-08-19",
+    "end_date": "2026-11-16",
     "totals": {
       "clicks": 11,
-      "impressions": 140,
-      "ctr": 7.86
+      "impressions": 151,
+      "ctr": 7.28
     },
-    "query_page_count": 20,
-    "query_count": 8,
-    "page_count": 52,
+    "query_page_count": 24,
+    "query_count": 9,
+    "page_count": 53,
     "queries_only": [
       {
         "keys": [
           "liangcaieyewear.com"
         ],
         "clicks": 1,
-        "impressions": 14,
-        "ctr": 7.14,
-        "position": 7.6
+        "impressions": 16,
+        "ctr": 6.25,
+        "position": 6.8
       },
       {
         "keys": [
@@ -46,9 +46,9 @@
           "eyewear production"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 64
+        "position": 62
       },
       {
         "keys": [
@@ -58,6 +58,15 @@
         "impressions": 3,
         "ctr": 0,
         "position": 8.7
+      },
+      {
+        "keys": [
+          "what should brands consider when developing a new eyewear collection? 2026"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
       },
       {
         "keys": [
@@ -93,9 +102,9 @@
           "https://www.liangcaieyewear.com/"
         ],
         "clicks": 6,
-        "impressions": 51,
-        "ctr": 11.76,
-        "position": 5.2
+        "impressions": 54,
+        "ctr": 11.11,
+        "position": 5
       },
       {
         "keys": [
@@ -120,8 +129,8 @@
           "https://www.liangcaieyewear.com/video/"
         ],
         "clicks": 1,
-        "impressions": 27,
-        "ctr": 3.7,
+        "impressions": 28,
+        "ctr": 3.57,
         "position": 10.4
       },
       {
@@ -129,18 +138,18 @@
           "https://www.liangcaieyewear.com/video/packaging.html"
         ],
         "clicks": 1,
-        "impressions": 5,
-        "ctr": 20.0,
-        "position": 15.4
+        "impressions": 7,
+        "ctr": 14.29,
+        "position": 12.9
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/about/"
         ],
         "clicks": 0,
-        "impressions": 24,
+        "impressions": 27,
         "ctr": 0,
-        "position": 12.5
+        "position": 11.5
       },
       {
         "keys": [
@@ -156,9 +165,9 @@
           "https://www.liangcaieyewear.com/blog/eyewear-trends-2026.html"
         ],
         "clicks": 0,
-        "impressions": 15,
+        "impressions": 17,
         "ctr": 0,
-        "position": 12.5
+        "position": 11.6
       },
       {
         "keys": [
@@ -174,27 +183,27 @@
           "https://www.liangcaieyewear.com/blog/oem-eyewear-manufacturing.html"
         ],
         "clicks": 0,
-        "impressions": 10,
+        "impressions": 17,
         "ctr": 0,
-        "position": 14.4
+        "position": 16.8
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/blog/what-is-spliced-acetate.html"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 4,
         "ctr": 0,
-        "position": 23
+        "position": 19.8
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/cactory-Tour/"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 4,
         "ctr": 0,
-        "position": 13.3
+        "position": 12.2
       },
       {
         "keys": [
@@ -225,12 +234,21 @@
       },
       {
         "keys": [
+          "https://www.liangcaieyewear.com/materials"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
           "https://www.liangcaieyewear.com/materials-20/"
         ],
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 5,
         "ctr": 0,
-        "position": 13.2
+        "position": 12
       },
       {
         "keys": [
@@ -255,9 +273,9 @@
           "https://www.liangcaieyewear.com/optical-frames/"
         ],
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 13,
         "ctr": 0,
-        "position": 18
+        "position": 16.5
       },
       {
         "keys": [
@@ -372,27 +390,27 @@
           "https://www.liangcaieyewear.com/product-Showcase/"
         ],
         "clicks": 0,
-        "impressions": 13,
+        "impressions": 15,
         "ctr": 0,
-        "position": 9.3
+        "position": 8.8
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/products/"
         ],
         "clicks": 0,
-        "impressions": 31,
+        "impressions": 33,
         "ctr": 0,
-        "position": 12.3
+        "position": 11.7
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/sunglass-frames/"
         ],
         "clicks": 0,
-        "impressions": 12,
+        "impressions": 13,
         "ctr": 0,
-        "position": 20
+        "position": 19.2
       },
       {
         "keys": [
@@ -564,9 +582,9 @@
           "https://www.liangcaieyewear.com/"
         ],
         "clicks": 1,
-        "impressions": 9,
-        "ctr": 11.11,
-        "position": 7
+        "impressions": 11,
+        "ctr": 9.09,
+        "position": 5.9
       },
       {
         "keys": [
@@ -594,9 +612,9 @@
           "https://www.liangcaieyewear.com/blog/oem-eyewear-manufacturing.html"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 64
+        "position": 62
       },
       {
         "keys": [
@@ -624,9 +642,9 @@
           "https://www.liangcaieyewear.com/about/"
         ],
         "clicks": 0,
-        "impressions": 7,
+        "impressions": 9,
         "ctr": 0,
-        "position": 10.7
+        "position": 9.6
       },
       {
         "keys": [
@@ -641,6 +659,16 @@
       {
         "keys": [
           "liangcaieyewear.com",
+          "https://www.liangcaieyewear.com/cactory-Tour/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "liangcaieyewear.com",
           "https://www.liangcaieyewear.com/contact/"
         ],
         "clicks": 0,
@@ -651,12 +679,22 @@
       {
         "keys": [
           "liangcaieyewear.com",
+          "https://www.liangcaieyewear.com/materials"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "liangcaieyewear.com",
           "https://www.liangcaieyewear.com/materials-20/"
         ],
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0,
-        "position": 8
+        "position": 7.7
       },
       {
         "keys": [
@@ -674,9 +712,9 @@
           "https://www.liangcaieyewear.com/optical-frames/"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 5,
         "ctr": 0,
-        "position": 12.7
+        "position": 10.8
       },
       {
         "keys": [
@@ -684,9 +722,9 @@
           "https://www.liangcaieyewear.com/product-Showcase/"
         ],
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 4,
         "ctr": 0,
-        "position": 3.5
+        "position": 4.5
       },
       {
         "keys": [
@@ -694,9 +732,9 @@
           "https://www.liangcaieyewear.com/products/"
         ],
         "clicks": 0,
-        "impressions": 8,
+        "impressions": 10,
         "ctr": 0,
-        "position": 8.6
+        "position": 7.4
       },
       {
         "keys": [
@@ -704,9 +742,9 @@
           "https://www.liangcaieyewear.com/sunglass-frames/"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 4,
         "ctr": 0,
-        "position": 16.7
+        "position": 15
       },
       {
         "keys": [
@@ -714,9 +752,29 @@
           "https://www.liangcaieyewear.com/video/"
         ],
         "clicks": 0,
-        "impressions": 9,
+        "impressions": 10,
         "ctr": 0,
-        "position": 10.4
+        "position": 10.3
+      },
+      {
+        "keys": [
+          "liangcaieyewear.com",
+          "https://www.liangcaieyewear.com/video/packaging.html"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "what should brands consider when developing a new eyewear collection? 2026",
+          "https://www.liangcaieyewear.com/blog/eyewear-trends-2026.html"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
       },
       {
         "keys": [
@@ -765,9 +823,9 @@
           "usa"
         ],
         "clicks": 8,
-        "impressions": 69,
-        "ctr": 11.59,
-        "position": 7.6
+        "impressions": 70,
+        "ctr": 11.43,
+        "position": 8.3
       },
       {
         "keys": [
@@ -882,18 +940,18 @@
           "esp"
         ],
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 6,
         "ctr": 0,
-        "position": 8.8
+        "position": 6.8
       },
       {
         "keys": [
           "fra"
         ],
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 7,
         "ctr": 0,
-        "position": 25
+        "position": 19.7
       },
       {
         "keys": [
@@ -909,7 +967,7 @@
           "grc"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
         "position": 4
       },
@@ -927,9 +985,9 @@
           "ita"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 4,
         "ctr": 0,
-        "position": 25.3
+        "position": 34
       },
       {
         "keys": [
@@ -996,6 +1054,15 @@
       },
       {
         "keys": [
+          "prt"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
           "qat"
         ],
         "clicks": 0,
@@ -1035,7 +1102,7 @@
           "swe"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 4,
         "ctr": 0,
         "position": 1
       },
@@ -1064,9 +1131,9 @@
           "DESKTOP"
         ],
         "clicks": 8,
-        "impressions": 109,
-        "ctr": 7.34,
-        "position": 12.6
+        "impressions": 120,
+        "ctr": 6.67,
+        "position": 12.7
       },
       {
         "keys": [
@@ -1081,8 +1148,8 @@
   },
   "ga4": {
     "property_id": "556940198",
-    "start_date": "2026-08-18",
-    "end_date": "2026-11-15",
+    "start_date": "2026-08-19",
+    "end_date": "2026-11-16",
     "daily": [
       {
         "dimensions": [
@@ -1645,6 +1712,19 @@
       },
       {
         "dimensions": [
+          "20261113"
+        ],
+        "metrics": {
+          "sessions": 28.0,
+          "totalUsers": 20.0,
+          "screenPageViews": 62.0,
+          "engagementRate": 0.21428571428571427,
+          "averageSessionDuration": 244.9733299642857,
+          "conversions": 0.0
+        }
+      },
+      {
+        "dimensions": [
           "20261114"
         ],
         "metrics": {
@@ -1668,6 +1748,19 @@
           "averageSessionDuration": 9.517593363636363,
           "conversions": 0.0
         }
+      },
+      {
+        "dimensions": [
+          "20261116"
+        ],
+        "metrics": {
+          "sessions": 6.0,
+          "totalUsers": 6.0,
+          "screenPageViews": 4.0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "conversions": 0.0
+        }
       }
     ],
     "by_channel": [
@@ -1676,11 +1769,11 @@
           "Direct"
         ],
         "metrics": {
-          "sessions": 539.0,
-          "totalUsers": 336.0,
-          "screenPageViews": 2015.0,
-          "engagementRate": 0.46567717996289426,
-          "averageSessionDuration": 522.8615041038962,
+          "sessions": 560.0,
+          "totalUsers": 356.0,
+          "screenPageViews": 2038.0,
+          "engagementRate": 0.45,
+          "averageSessionDuration": 503.6397769535714,
           "conversions": 12.0
         }
       },
@@ -1689,11 +1782,11 @@
           "Organic Search"
         ],
         "metrics": {
-          "sessions": 218.0,
+          "sessions": 229.0,
           "totalUsers": 35.0,
-          "screenPageViews": 1601.0,
-          "engagementRate": 0.7798165137614679,
-          "averageSessionDuration": 1286.9015161055047,
+          "screenPageViews": 1644.0,
+          "engagementRate": 0.7641921397379913,
+          "averageSessionDuration": 1254.0954557554585,
           "conversions": 0.0
         }
       },
@@ -1702,11 +1795,11 @@
           "Unassigned"
         ],
         "metrics": {
-          "sessions": 40.0,
-          "totalUsers": 24.0,
+          "sessions": 42.0,
+          "totalUsers": 26.0,
           "screenPageViews": 409.0,
           "engagementRate": 0.0,
-          "averageSessionDuration": 1669.7692826999998,
+          "averageSessionDuration": 1590.2564597142857,
           "conversions": 0.0
         }
       },
@@ -1756,11 +1849,11 @@
           "/"
         ],
         "metrics": {
-          "sessions": 663.0,
-          "totalUsers": 317.0,
-          "screenPageViews": 1701.0,
-          "engagementRate": 0.5399698340874811,
-          "averageSessionDuration": 477.7427185912519,
+          "sessions": 693.0,
+          "totalUsers": 338.0,
+          "screenPageViews": 1740.0,
+          "engagementRate": 0.5266955266955267,
+          "averageSessionDuration": 463.7617055526696,
           "conversions": 0.0
         }
       },
@@ -1769,11 +1862,11 @@
           "/oem-odm/"
         ],
         "metrics": {
-          "sessions": 135.0,
-          "totalUsers": 39.0,
-          "screenPageViews": 390.0,
-          "engagementRate": 0.8888888888888888,
-          "averageSessionDuration": 338.6293548888888,
+          "sessions": 139.0,
+          "totalUsers": 40.0,
+          "screenPageViews": 394.0,
+          "engagementRate": 0.8776978417266187,
+          "averageSessionDuration": 330.26126585611513,
           "conversions": 0.0
         }
       },
@@ -1782,11 +1875,11 @@
           "/video/"
         ],
         "metrics": {
-          "sessions": 97.0,
-          "totalUsers": 28.0,
-          "screenPageViews": 232.0,
-          "engagementRate": 0.8762886597938144,
-          "averageSessionDuration": 174.130814628866,
+          "sessions": 99.0,
+          "totalUsers": 29.0,
+          "screenPageViews": 234.0,
+          "engagementRate": 0.8686868686868687,
+          "averageSessionDuration": 172.45390654545454,
           "conversions": 0.0
         }
       },
@@ -1795,11 +1888,11 @@
           "/blog/"
         ],
         "metrics": {
-          "sessions": 111.0,
-          "totalUsers": 28.0,
-          "screenPageViews": 222.0,
-          "engagementRate": 0.8738738738738738,
-          "averageSessionDuration": 143.890357009009,
+          "sessions": 113.0,
+          "totalUsers": 29.0,
+          "screenPageViews": 225.0,
+          "engagementRate": 0.8761061946902655,
+          "averageSessionDuration": 141.83004779646018,
           "conversions": 0.0
         }
       },
@@ -1808,11 +1901,11 @@
           "/about/"
         ],
         "metrics": {
-          "sessions": 89.0,
+          "sessions": 90.0,
           "totalUsers": 27.0,
-          "screenPageViews": 186.0,
-          "engagementRate": 0.8764044943820225,
-          "averageSessionDuration": 262.1781072247191,
+          "screenPageViews": 187.0,
+          "engagementRate": 0.8777777777777778,
+          "averageSessionDuration": 259.31687222222223,
           "conversions": 0.0
         }
       },
@@ -1821,11 +1914,11 @@
           "/products/"
         ],
         "metrics": {
-          "sessions": 80.0,
-          "totalUsers": 35.0,
-          "screenPageViews": 183.0,
-          "engagementRate": 0.8375,
-          "averageSessionDuration": 315.10803235,
+          "sessions": 83.0,
+          "totalUsers": 36.0,
+          "screenPageViews": 186.0,
+          "engagementRate": 0.8433734939759037,
+          "averageSessionDuration": 304.1062587951807,
           "conversions": 0.0
         }
       },
@@ -1834,11 +1927,11 @@
           "/contact/"
         ],
         "metrics": {
-          "sessions": 78.0,
-          "totalUsers": 35.0,
-          "screenPageViews": 161.0,
-          "engagementRate": 0.8974358974358975,
-          "averageSessionDuration": 361.432401525641,
+          "sessions": 82.0,
+          "totalUsers": 36.0,
+          "screenPageViews": 167.0,
+          "engagementRate": 0.8902439024390244,
+          "averageSessionDuration": 359.94199920731705,
           "conversions": 6.0
         }
       },
@@ -1847,11 +1940,11 @@
           "/sunglass-frames/"
         ],
         "metrics": {
-          "sessions": 67.0,
-          "totalUsers": 27.0,
-          "screenPageViews": 135.0,
-          "engagementRate": 0.8955223880597015,
-          "averageSessionDuration": 251.52257999999998,
+          "sessions": 68.0,
+          "totalUsers": 28.0,
+          "screenPageViews": 136.0,
+          "engagementRate": 0.8970588235294118,
+          "averageSessionDuration": 247.87850127941178,
           "conversions": 0.0
         }
       },
@@ -1873,11 +1966,11 @@
           "/blog/how-patchwork-acetate-glasses-made.html"
         ],
         "metrics": {
-          "sessions": 42.0,
+          "sessions": 43.0,
           "totalUsers": 15.0,
-          "screenPageViews": 57.0,
-          "engagementRate": 0.9285714285714286,
-          "averageSessionDuration": 194.66721511904763,
+          "screenPageViews": 58.0,
+          "engagementRate": 0.9302325581395349,
+          "averageSessionDuration": 190.26736955813954,
           "conversions": 0.0
         }
       },
@@ -1886,11 +1979,11 @@
           "/sunglass-frames/XY-204.html"
         ],
         "metrics": {
-          "sessions": 31.0,
+          "sessions": 32.0,
           "totalUsers": 13.0,
-          "screenPageViews": 45.0,
-          "engagementRate": 0.9354838709677419,
-          "averageSessionDuration": 269.76672651612904,
+          "screenPageViews": 46.0,
+          "engagementRate": 0.9375,
+          "averageSessionDuration": 266.6502373125,
           "conversions": 2.0
         }
       },
@@ -2130,6 +2223,19 @@
       },
       {
         "dimensions": [
+          "/sunglass-frames/XY-238.html"
+        ],
+        "metrics": {
+          "sessions": 8.0,
+          "totalUsers": 7.0,
+          "screenPageViews": 10.0,
+          "engagementRate": 0.75,
+          "averageSessionDuration": 309.324887625,
+          "conversions": 0.0
+        }
+      },
+      {
+        "dimensions": [
           "/privacy/"
         ],
         "metrics": {
@@ -2182,19 +2288,6 @@
       },
       {
         "dimensions": [
-          "/sunglass-frames/XY-238.html"
-        ],
-        "metrics": {
-          "sessions": 7.0,
-          "totalUsers": 6.0,
-          "screenPageViews": 9.0,
-          "engagementRate": 0.7142857142857143,
-          "averageSessionDuration": 352.2849921428571,
-          "conversions": 0.0
-        }
-      },
-      {
-        "dimensions": [
           "/sunglass-frames/XY-194.html"
         ],
         "metrics": {
@@ -2203,6 +2296,19 @@
           "screenPageViews": 9.0,
           "engagementRate": 1.0,
           "averageSessionDuration": 671.2438046,
+          "conversions": 0.0
+        }
+      },
+      {
+        "dimensions": [
+          "/sunglass-frames/XY-206.html"
+        ],
+        "metrics": {
+          "sessions": 9.0,
+          "totalUsers": 5.0,
+          "screenPageViews": 8.0,
+          "engagementRate": 1.0,
+          "averageSessionDuration": 246.68715166666667,
           "conversions": 0.0
         }
       },
@@ -2286,14 +2392,14 @@
       },
       {
         "dimensions": [
-          "/sunglass-frames/XY-206.html"
+          "/sunglass-frames/XY-192.html"
         ],
         "metrics": {
-          "sessions": 8.0,
-          "totalUsers": 4.0,
+          "sessions": 5.0,
+          "totalUsers": 3.0,
           "screenPageViews": 7.0,
-          "engagementRate": 1.0,
-          "averageSessionDuration": 264.014244375,
+          "engagementRate": 0.8,
+          "averageSessionDuration": 105.4798046,
           "conversions": 0.0
         }
       },
@@ -2387,19 +2493,6 @@
           "averageSessionDuration": 3.8282359999999995,
           "conversions": 0.0
         }
-      },
-      {
-        "dimensions": [
-          "/optical-frames/XY-189.html"
-        ],
-        "metrics": {
-          "sessions": 5.0,
-          "totalUsers": 5.0,
-          "screenPageViews": 5.0,
-          "engagementRate": 0.6,
-          "averageSessionDuration": 16.174066,
-          "conversions": 0.0
-        }
       }
     ],
     "by_source_medium": [
@@ -2408,11 +2501,11 @@
           "(direct) / (none)"
         ],
         "metrics": {
-          "sessions": 539.0,
-          "totalUsers": 336.0,
-          "screenPageViews": 2015.0,
-          "engagementRate": 0.46567717996289426,
-          "averageSessionDuration": 522.8615041038962,
+          "sessions": 560.0,
+          "totalUsers": 356.0,
+          "screenPageViews": 2038.0,
+          "engagementRate": 0.45,
+          "averageSessionDuration": 503.6397769535714,
           "conversions": 12.0
         }
       },
@@ -2421,11 +2514,11 @@
           "google / organic"
         ],
         "metrics": {
-          "sessions": 207.0,
+          "sessions": 218.0,
           "totalUsers": 28.0,
-          "screenPageViews": 1548.0,
-          "engagementRate": 0.7971014492753623,
-          "averageSessionDuration": 1317.6961948309176,
+          "screenPageViews": 1591.0,
+          "engagementRate": 0.7798165137614679,
+          "averageSessionDuration": 1281.680922876147,
           "conversions": 0.0
         }
       },
@@ -2434,11 +2527,11 @@
           "(not set)"
         ],
         "metrics": {
-          "sessions": 40.0,
-          "totalUsers": 24.0,
+          "sessions": 42.0,
+          "totalUsers": 26.0,
           "screenPageViews": 409.0,
           "engagementRate": 0.0,
-          "averageSessionDuration": 1669.7692826999998,
+          "averageSessionDuration": 1590.2564597142857,
           "conversions": 0.0
         }
       },

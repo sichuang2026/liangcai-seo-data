@@ -103,6 +103,8 @@ def fetch_gsc(creds, site, start, end):
     queries = gsc_query(svc, site, start, end, ["query", "page"])
     countries = gsc_query(svc, site, start, end, ["country"])
     devices = gsc_query(svc, site, start, end, ["device"])
+    # 日期维度：唯一能算真窗口（近 7 天 / 前 7 天）的口径，勿用滚动窗口快照相减
+    dates = gsc_query(svc, site, start, end, ["date"])
     total_clicks = sum(q["clicks"] for q in countries)
     total_impr = sum(q["impressions"] for q in countries)
     return {
@@ -122,6 +124,7 @@ def fetch_gsc(creds, site, start, end):
         "queries": queries,
         "countries": countries,
         "devices": devices,
+        "dates": dates,
     }
 
 

@@ -51,12 +51,31 @@ def main():
     title_cand = [p for p in page_rows
                   if p["i"] >= CTR_MIN_IMPRESSIONS and p["pos"] <= CTR_MAX_POSITION and p["ctr"] < CTR_TARGET]
 
+    # 真窗口：用日期维度算近 7 天 / 前 7 天（滚动 90 天窗口相减不是 7 天数据）
+    date_rows = sorted(gsc.get("dates", []) or [], key=lambda x: x["keys"][0])
+    last7 = date_rows[-7:]
+    prev7 = date_rows[-14:-7]
+    win = {
+        "daily_points": len(date_rows),
+        "last7_impressions": sum(r.get("impressions", 0) for r in last7),
+        "last7_clicks": sum(r.get("clicks", 0) for r in last7),
+        "prev7_impressions": sum(r.get("impressions", 0) for r in prev7),
+        "prev7_clicks": sum(r.get("clicks", 0) for r in prev7),
+        "last7_from": last7[0]["keys"][0] if last7 else None,
+        "last7_to": last7[-1]["keys"][0] if last7 else None,
+    }
+
     gsc_sum = {
         "clicks": total_c, "impressions": total_i,
         "ctr": gsc.get("totals", {}).get("ctr", 0),
         "pages_with_data": len(page_rows),
         "page_impressions_sum": sum(p["i"] for p in page_rows),
-        "impression_mismatch": (abs(sum(p["i"] for p in page_rows) - total_i) / total_i > 0.1) if total_i else False,
+        # 页面维度不是站点总量的分区：同一 SERP 多个自家页面各记一次曝光，
+        # 站点总量（country/device/date 三个维度互相一致）是去重后的真值。
+        # 因此这里只做比值监控，不做「口径错」告警；对不上属正常。
+        "page_total_ratio": round(sum(p["i"] for p in page_rows) / total_i, 2) if total_i else 0,
+        "page_click_mismatch": abs(sum(p["c"] for p in page_rows) - total_c) > max(1, total_c * 0.05),
+        "window_7d": win,
         "visible_impressions": visible_i,
         "hidden_impressions": max(total_i - visible_i, 0),
         "brand_impressions": brand_i,
@@ -118,11 +137,21 @@ def main():
 
     summary = dict(known)
     summary["gsc"] = gsc_sum
-    if gsc_sum.get("impression_mismatch"):
-        summary["warnings"] = [
-            "页面级曝光合计 %s 与站点总量 %s 对不上，需检查取数口径（是否混入 video/image 搜索类型）"
-            % (gsc_sum["page_impressions_sum"], gsc_sum["impressions"])
-        ]
+    warnings = []
+    if gsc_sum.get("page_click_mismatch"):
+        warnings.append(
+            "页面级点击合计与站点总量对不上（页面 %s / 站点 %s），点击若不一致才是真口径错，需查取数"
+            % (sum(p["c"] for p in page_rows), total_c)
+        )
+    if win["daily_points"] and not (1.3 <= gsc_sum["page_total_ratio"] <= 4.0):
+        warnings.append(
+            "页面曝光/站点曝光比值 %s 偏离常态区间 1.3–4.0，需复查是否出现 Discover/图片结果放量"
+            % gsc_sum["page_total_ratio"]
+        )
+    if not win["daily_points"]:
+        warnings.append("缺少日期维度数据，近 7 天窗口无法计算（脚本需带 dates 抓取）")
+    if warnings:
+        summary["warnings"] = warnings
     summary["ga4"] = ga4_sum
     summary["built_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
 

@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-24T08:40:20.321929+08:00",
+  "generated_at": "2026-11-25T08:43:20.875827+08:00",
   "range_days": 90,
   "gsc": {
     "site": "https://www.liangcaieyewear.com/",
-    "start_date": "2026-08-26",
-    "end_date": "2026-11-23",
+    "start_date": "2026-08-27",
+    "end_date": "2026-11-24",
     "totals": {
       "clicks": 12,
-      "impressions": 284,
-      "ctr": 4.23
+      "impressions": 301,
+      "ctr": 3.99
     },
-    "query_page_count": 39,
-    "query_count": 18,
+    "query_page_count": 41,
+    "query_count": 20,
     "page_count": 58,
     "queries_only": [
       {
@@ -37,9 +37,18 @@
           "b2b glassware product trends 2026"
         ],
         "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 45.5
+      },
+      {
+        "keys": [
+          "best organic sunglasses 2026"
+        ],
+        "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 44
+        "position": 1
       },
       {
         "keys": [
@@ -52,12 +61,21 @@
       },
       {
         "keys": [
+          "how to start eyeglasses business"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
           "liangcai"
         ],
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 5,
         "ctr": 0,
-        "position": 7.2
+        "position": 6.4
       },
       {
         "keys": [
@@ -82,9 +100,9 @@
           "shenzhen acetate frame manufacturer"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 9,
         "ctr": 0,
-        "position": 23.7
+        "position": 24.8
       },
       {
         "keys": [
@@ -100,9 +118,9 @@
           "spliced acetate frames"
         ],
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 6,
         "ctr": 0,
-        "position": 9.6
+        "position": 9
       },
       {
         "keys": [
@@ -127,9 +145,9 @@
           "xy 192"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 2
+        "position": 3
       },
       {
         "keys": [
@@ -145,9 +163,9 @@
           "xy 251"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 11
+        "position": 10.5
       },
       {
         "keys": [
@@ -183,8 +201,8 @@
           "https://www.liangcaieyewear.com/"
         ],
         "clicks": 6,
-        "impressions": 86,
-        "ctr": 6.98,
+        "impressions": 89,
+        "ctr": 6.74,
         "position": 4.7
       },
       {
@@ -246,9 +264,9 @@
           "https://www.liangcaieyewear.com/blog/eyewear-trends-2026.html"
         ],
         "clicks": 0,
-        "impressions": 23,
+        "impressions": 26,
         "ctr": 0,
-        "position": 13.7
+        "position": 14.3
       },
       {
         "keys": [
@@ -273,18 +291,18 @@
           "https://www.liangcaieyewear.com/blog/start-eyewear-brand.html"
         ],
         "clicks": 0,
-        "impressions": 14,
+        "impressions": 16,
         "ctr": 0,
-        "position": 43.2
+        "position": 44.9
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/blog/what-is-spliced-acetate.html"
         ],
         "clicks": 0,
-        "impressions": 9,
+        "impressions": 10,
         "ctr": 0,
-        "position": 13.1
+        "position": 13
       },
       {
         "keys": [
@@ -516,18 +534,18 @@
           "https://www.liangcaieyewear.com/products/"
         ],
         "clicks": 0,
-        "impressions": 50,
+        "impressions": 56,
         "ctr": 0,
-        "position": 10.9
+        "position": 12.5
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/sunglass-frames/"
         ],
         "clicks": 0,
-        "impressions": 23,
+        "impressions": 24,
         "ctr": 0,
-        "position": 18.3
+        "position": 17.8
       },
       {
         "keys": [
@@ -543,9 +561,9 @@
           "https://www.liangcaieyewear.com/sunglass-frames/XY-192.html"
         ],
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 7,
         "ctr": 0,
-        "position": 16.5
+        "position": 14.7
       },
       {
         "keys": [
@@ -651,9 +669,9 @@
           "https://www.liangcaieyewear.com/sunglass-frames/XY-251.html"
         ],
         "clicks": 0,
-        "impressions": 7,
+        "impressions": 8,
         "ctr": 0,
-        "position": 15.4
+        "position": 14.8
       },
       {
         "keys": [
@@ -728,9 +746,19 @@
           "https://www.liangcaieyewear.com/blog/eyewear-trends-2026.html"
         ],
         "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 45.5
+      },
+      {
+        "keys": [
+          "best organic sunglasses 2026",
+          "https://www.liangcaieyewear.com/blog/eyewear-trends-2026.html"
+        ],
+        "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 44
+        "position": 1
       },
       {
         "keys": [
@@ -744,13 +772,23 @@
       },
       {
         "keys": [
+          "how to start eyeglasses business",
+          "https://www.liangcaieyewear.com/blog/start-eyewear-brand.html"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
           "liangcai",
           "https://www.liangcaieyewear.com/"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 4,
         "ctr": 0,
-        "position": 6.7
+        "position": 5.8
       },
       {
         "keys": [
@@ -958,9 +996,9 @@
           "https://www.liangcaieyewear.com/products/"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 9,
         "ctr": 0,
-        "position": 23.7
+        "position": 24.8
       },
       {
         "keys": [
@@ -978,9 +1016,9 @@
           "https://www.liangcaieyewear.com/blog/what-is-spliced-acetate.html"
         ],
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0,
-        "position": 13.5
+        "position": 13
       },
       {
         "keys": [
@@ -988,9 +1026,9 @@
           "https://www.liangcaieyewear.com/sunglass-frames/"
         ],
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 5,
         "ctr": 0,
-        "position": 8.2
+        "position": 7.8
       },
       {
         "keys": [
@@ -1018,9 +1056,9 @@
           "https://www.liangcaieyewear.com/sunglass-frames/XY-192.html"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 2
+        "position": 3
       },
       {
         "keys": [
@@ -1038,9 +1076,9 @@
           "https://www.liangcaieyewear.com/sunglass-frames/XY-251.html"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 11
+        "position": 10.5
       },
       {
         "keys": [
@@ -1099,9 +1137,9 @@
           "usa"
         ],
         "clicks": 8,
-        "impressions": 136,
-        "ctr": 5.88,
-        "position": 23.9
+        "impressions": 147,
+        "ctr": 5.44,
+        "position": 24.3
       },
       {
         "keys": [
@@ -1279,9 +1317,9 @@
           "hkg"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 3,
         "ctr": 0,
-        "position": 48
+        "position": 19.3
       },
       {
         "keys": [
@@ -1309,6 +1347,24 @@
         "impressions": 10,
         "ctr": 0,
         "position": 39.3
+      },
+      {
+        "keys": [
+          "jpn"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "kgz"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
       },
       {
         "keys": [
@@ -1342,9 +1398,9 @@
           "mex"
         ],
         "clicks": 0,
-        "impressions": 7,
+        "impressions": 8,
         "ctr": 0,
-        "position": 5.1
+        "position": 5
       },
       {
         "keys": [
@@ -1432,9 +1488,9 @@
           "sau"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 4,
         "ctr": 0,
-        "position": 9.3
+        "position": 9.5
       },
       {
         "keys": [
@@ -1515,18 +1571,18 @@
           "DESKTOP"
         ],
         "clicks": 9,
-        "impressions": 223,
-        "ctr": 4.04,
-        "position": 19.3
+        "impressions": 229,
+        "ctr": 3.93,
+        "position": 19.6
       },
       {
         "keys": [
           "MOBILE"
         ],
         "clicks": 3,
-        "impressions": 61,
-        "ctr": 4.92,
-        "position": 13.3
+        "impressions": 72,
+        "ctr": 4.17,
+        "position": 13.8
       }
     ],
     "dates": [
@@ -1808,13 +1864,22 @@
         "impressions": 18,
         "ctr": 0,
         "position": 11.4
+      },
+      {
+        "keys": [
+          "2026-11-22"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 21
       }
     ]
   },
   "ga4": {
     "property_id": "556940198",
-    "start_date": "2026-08-26",
-    "end_date": "2026-11-23",
+    "start_date": "2026-08-27",
+    "end_date": "2026-11-24",
     "daily": [
       {
         "dimensions": [
@@ -2517,6 +2582,19 @@
           "averageSessionDuration": 279.69213520000005,
           "conversions": 0.0
         }
+      },
+      {
+        "dimensions": [
+          "20261124"
+        ],
+        "metrics": {
+          "sessions": 1.0,
+          "totalUsers": 1.0,
+          "screenPageViews": 1.0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 4.747808,
+          "conversions": 0.0
+        }
       }
     ],
     "by_channel": [
@@ -2525,11 +2603,11 @@
           "Direct"
         ],
         "metrics": {
-          "sessions": 626.0,
-          "totalUsers": 406.0,
-          "screenPageViews": 2152.0,
-          "engagementRate": 0.43130990415335463,
-          "averageSessionDuration": 460.24927185782747,
+          "sessions": 627.0,
+          "totalUsers": 407.0,
+          "screenPageViews": 2153.0,
+          "engagementRate": 0.430622009569378,
+          "averageSessionDuration": 459.52279424401917,
           "conversions": 12.0
         }
       },
@@ -2605,11 +2683,11 @@
           "/"
         ],
         "metrics": {
-          "sessions": 754.0,
-          "totalUsers": 362.0,
-          "screenPageViews": 1846.0,
-          "engagementRate": 0.5251989389920424,
-          "averageSessionDuration": 444.6395071564986,
+          "sessions": 755.0,
+          "totalUsers": 363.0,
+          "screenPageViews": 1847.0,
+          "engagementRate": 0.5245033112582781,
+          "averageSessionDuration": 444.0568691443709,
           "conversions": 0.0
         }
       },
@@ -2960,7 +3038,7 @@
           "totalUsers": 11.0,
           "screenPageViews": 11.0,
           "engagementRate": 0.18181818181818182,
-          "averageSessionDuration": 4.203688181818182,
+          "averageSessionDuration": 4.2036881818181815,
           "conversions": 0.0
         }
       },
@@ -3257,11 +3335,11 @@
           "(direct) / (none)"
         ],
         "metrics": {
-          "sessions": 626.0,
-          "totalUsers": 406.0,
-          "screenPageViews": 2152.0,
-          "engagementRate": 0.43130990415335463,
-          "averageSessionDuration": 460.24927185782747,
+          "sessions": 627.0,
+          "totalUsers": 407.0,
+          "screenPageViews": 2153.0,
+          "engagementRate": 0.430622009569378,
+          "averageSessionDuration": 459.52279424401917,
           "conversions": 12.0
         }
       },

@@ -23,6 +23,9 @@ from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import (
     DateRange,
     Dimension,
+    Filter,
+    FilterExpression,
+    FilterExpressionList,
     Metric,
     OrderBy,
     RunReportRequest,
@@ -33,6 +36,15 @@ SCOPES = [
     "https://www.googleapis.com/auth/analytics.readonly",
 ]
 DAYS = int(os.environ.get("LOOKBACK_DAYS", "90"))
+
+# 内部/运维 IP：不算访客。2026-11-25 董事长定。
+#   157.238.187.161 = 外贸线路（进后台/宝塔/测页面）
+#   113.90.83.60    = 深圳本地线路
+# GA4 侧用 ip_geo 的 pseudo 维度 ipAddress（需 property 开启增强型衡量）。
+INTERNAL_IPS = [ip.strip() for ip in os.environ.get(
+    "INTERNAL_IPS",
+    "157.238.187.161,113.90.83.60",
+).split(",") if ip.strip()]
 OUT_DIR = Path("data")
 GSC_ROW_LIMIT = 25000
 
@@ -129,7 +141,8 @@ def fetch_gsc(creds, site, start, end):
 
 
 # ---------------- GA4 ----------------
-def ga4_report(client, prop, start, end, dimensions, metrics, limit=100, order_metric=None, order_dim=None):
+def ga4_report(client, prop, start, end, dimensions, metrics, limit=100,
+               order_metric=None, order_dim=None, exclude_ips=None):
     req = RunReportRequest(
         property=f"properties/{prop}",
         date_ranges=[DateRange(start_date=start, end_date=end)],
@@ -137,6 +150,19 @@ def ga4_report(client, prop, start, end, dimensions, metrics, limit=100, order_m
         metrics=[Metric(name=m) for m in metrics],
         limit=limit,
     )
+    if exclude_ips:
+        # ipAddress 是 ip_geo 伪维度的 key，不能进 dimensions，只能放 filter
+        req.dimension_filter = FilterExpression(
+            not_expression=FilterExpression(
+                filter=Filter(
+                    field_name="ipAddress",
+                    string_filter=Filter.StringFilter(
+                        match_type=Filter.StringFilter.MatchType.IN_LIST,
+                        value=",".join(exclude_ips),
+                    ),
+                )
+            )
+        )
     if order_dim:
         # 日期是维度不是指标，必须走 DimensionOrderBy，按时间升序
         req.order_bys = [
@@ -166,16 +192,20 @@ def fetch_ga4(creds, prop, start, end):
     print(f"[GA4] property {prop} {start} ~ {end}")
     core = ["sessions", "totalUsers", "screenPageViews", "engagementRate",
             "averageSessionDuration", "conversions"]
-    daily = ga4_report(client, prop, start, end, ["date"], core, limit=DAYS + 5, order_dim="date")
+    ex = INTERNAL_IPS
+    daily = ga4_report(client, prop, start, end, ["date"], core, limit=DAYS + 5,
+                       order_dim="date", exclude_ips=ex)
     channels = ga4_report(client, prop, start, end, ["sessionDefaultChannelGroup"], core,
-                          limit=20, order_metric="sessions")
-    pages = ga4_report(client, prop, start, end, ["pagePath"], core, limit=50, order_metric="screenPageViews")
+                          limit=20, order_metric="sessions", exclude_ips=ex)
+    pages = ga4_report(client, prop, start, end, ["pagePath"], core, limit=50,
+                       order_metric="screenPageViews", exclude_ips=ex)
     source_medium = ga4_report(client, prop, start, end, ["sessionSourceMedium"], core,
-                               limit=50, order_metric="sessions")
+                               limit=50, order_metric="sessions", exclude_ips=ex)
     return {
         "property_id": prop,
         "start_date": start,
         "end_date": end,
+        "excluded_ips": INTERNAL_IPS,
         "daily": daily,
         "by_channel": channels,
         "top_pages": pages,

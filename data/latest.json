@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-26T08:43:17.745191+08:00",
+  "generated_at": "2026-11-27T08:47:25.253952+08:00",
   "range_days": 90,
   "gsc": {
     "site": "https://www.liangcaieyewear.com/",
-    "start_date": "2026-08-28",
-    "end_date": "2026-11-25",
+    "start_date": "2026-08-29",
+    "end_date": "2026-11-26",
     "totals": {
-      "clicks": 12,
-      "impressions": 338,
-      "ctr": 3.55
+      "clicks": 14,
+      "impressions": 369,
+      "ctr": 3.79
     },
-    "query_page_count": 42,
-    "query_count": 20,
+    "query_page_count": 43,
+    "query_count": 21,
     "page_count": 59,
     "queries_only": [
       {
@@ -19,9 +19,9 @@
           "liangcaieyewear.com"
         ],
         "clicks": 1,
-        "impressions": 34,
-        "ctr": 2.94,
-        "position": 6.5
+        "impressions": 50,
+        "ctr": 2.0,
+        "position": 9.9
       },
       {
         "keys": [
@@ -100,9 +100,9 @@
           "shenzhen acetate frame manufacturer"
         ],
         "clicks": 0,
-        "impressions": 9,
+        "impressions": 10,
         "ctr": 0,
-        "position": 24.8
+        "position": 27.1
       },
       {
         "keys": [
@@ -118,9 +118,9 @@
           "spliced acetate frames"
         ],
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 9,
         "ctr": 0,
-        "position": 9
+        "position": 13.4
       },
       {
         "keys": [
@@ -148,6 +148,15 @@
         "impressions": 2,
         "ctr": 0,
         "position": 3
+      },
+      {
+        "keys": [
+          "xy 206"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
       },
       {
         "keys": [
@@ -200,28 +209,28 @@
         "keys": [
           "https://www.liangcaieyewear.com/"
         ],
-        "clicks": 6,
-        "impressions": 93,
-        "ctr": 6.45,
-        "position": 4.8
+        "clicks": 7,
+        "impressions": 102,
+        "ctr": 6.86,
+        "position": 4.7
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/blog"
         ],
         "clicks": 2,
-        "impressions": 35,
-        "ctr": 5.71,
-        "position": 18
+        "impressions": 42,
+        "ctr": 4.76,
+        "position": 18.2
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/about/"
         ],
         "clicks": 1,
-        "impressions": 48,
-        "ctr": 2.08,
-        "position": 17.2
+        "impressions": 50,
+        "ctr": 2.0,
+        "position": 17.0
       },
       {
         "keys": [
@@ -234,12 +243,21 @@
       },
       {
         "keys": [
+          "https://www.liangcaieyewear.com/privacy"
+        ],
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 16.67,
+        "position": 2.5
+      },
+      {
+        "keys": [
           "https://www.liangcaieyewear.com/video/"
         ],
         "clicks": 1,
-        "impressions": 43,
-        "ctr": 2.33,
-        "position": 9.6
+        "impressions": 49,
+        "ctr": 2.04,
+        "position": 11.4
       },
       {
         "keys": [
@@ -264,9 +282,9 @@
           "https://www.liangcaieyewear.com/blog/eyewear-trends-2026.html"
         ],
         "clicks": 0,
-        "impressions": 27,
+        "impressions": 28,
         "ctr": 0,
-        "position": 14.1
+        "position": 14.0
       },
       {
         "keys": [
@@ -282,9 +300,9 @@
           "https://www.liangcaieyewear.com/blog/oem-eyewear-manufacturing.html"
         ],
         "clicks": 0,
-        "impressions": 49,
+        "impressions": 50,
         "ctr": 0,
-        "position": 37.5
+        "position": 36.9
       },
       {
         "keys": [
@@ -300,9 +318,9 @@
           "https://www.liangcaieyewear.com/blog/what-is-spliced-acetate.html"
         ],
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 14,
         "ctr": 0,
-        "position": 12.8
+        "position": 11.8
       },
       {
         "keys": [
@@ -327,18 +345,18 @@
           "https://www.liangcaieyewear.com/catalog/"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 9,
         "ctr": 0,
-        "position": 9
+        "position": 18.7
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/contact/"
         ],
         "clicks": 0,
-        "impressions": 23,
+        "impressions": 24,
         "ctr": 0,
-        "position": 14.0
+        "position": 13.8
       },
       {
         "keys": [
@@ -354,18 +372,18 @@
           "https://www.liangcaieyewear.com/craftsmanship/"
         ],
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 12,
         "ctr": 0,
-        "position": 7.1
+        "position": 7.2
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/materials"
         ],
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 5,
         "ctr": 0,
-        "position": 10
+        "position": 8.2
       },
       {
         "keys": [
@@ -399,9 +417,9 @@
           "https://www.liangcaieyewear.com/oem-odm/"
         ],
         "clicks": 0,
-        "impressions": 17,
+        "impressions": 18,
         "ctr": 0,
-        "position": 28.6
+        "position": 29.4
       },
       {
         "keys": [
@@ -522,15 +540,6 @@
       },
       {
         "keys": [
-          "https://www.liangcaieyewear.com/privacy"
-        ],
-        "clicks": 0,
-        "impressions": 5,
-        "ctr": 0,
-        "position": 2.6
-      },
-      {
-        "keys": [
           "https://www.liangcaieyewear.com/product-Showcase/"
         ],
         "clicks": 0,
@@ -543,18 +552,18 @@
           "https://www.liangcaieyewear.com/products/"
         ],
         "clicks": 0,
-        "impressions": 57,
+        "impressions": 67,
         "ctr": 0,
-        "position": 12.5
+        "position": 13.8
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/sunglass-frames/"
         ],
         "clicks": 0,
-        "impressions": 24,
+        "impressions": 27,
         "ctr": 0,
-        "position": 17.8
+        "position": 18.5
       },
       {
         "keys": [
@@ -606,9 +615,9 @@
           "https://www.liangcaieyewear.com/sunglass-frames/XY-206.html"
         ],
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 7,
         "ctr": 0,
-        "position": 20.3
+        "position": 19
       },
       {
         "keys": [
@@ -687,18 +696,18 @@
           "https://www.liangcaieyewear.com/terms"
         ],
         "clicks": 0,
-        "impressions": 7,
+        "impressions": 8,
         "ctr": 0,
-        "position": 4
+        "position": 3.9
       },
       {
         "keys": [
           "https://www.liangcaieyewear.com/trends"
         ],
         "clicks": 0,
-        "impressions": 8,
+        "impressions": 9,
         "ctr": 0,
-        "position": 7.9
+        "position": 8
       },
       {
         "keys": [
@@ -735,8 +744,8 @@
           "https://www.liangcaieyewear.com/"
         ],
         "clicks": 1,
-        "impressions": 24,
-        "ctr": 4.17,
+        "impressions": 28,
+        "ctr": 3.57,
         "position": 5.0
       },
       {
@@ -815,9 +824,9 @@
           "https://www.liangcaieyewear.com/about/"
         ],
         "clicks": 0,
-        "impressions": 14,
+        "impressions": 15,
         "ctr": 0,
-        "position": 10.6
+        "position": 11.2
       },
       {
         "keys": [
@@ -825,9 +834,9 @@
           "https://www.liangcaieyewear.com/blog"
         ],
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 12,
         "ctr": 0,
-        "position": 4.3
+        "position": 12.8
       },
       {
         "keys": [
@@ -855,9 +864,9 @@
           "https://www.liangcaieyewear.com/catalog/"
         ],
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 9,
         "ctr": 0,
-        "position": 9
+        "position": 18.7
       },
       {
         "keys": [
@@ -935,9 +944,9 @@
           "https://www.liangcaieyewear.com/products/"
         ],
         "clicks": 0,
-        "impressions": 17,
+        "impressions": 24,
         "ctr": 0,
-        "position": 8.7
+        "position": 12.6
       },
       {
         "keys": [
@@ -975,9 +984,9 @@
           "https://www.liangcaieyewear.com/video/"
         ],
         "clicks": 0,
-        "impressions": 15,
+        "impressions": 20,
         "ctr": 0,
-        "position": 9.9
+        "position": 14.1
       },
       {
         "keys": [
@@ -1015,9 +1024,9 @@
           "https://www.liangcaieyewear.com/products/"
         ],
         "clicks": 0,
-        "impressions": 9,
+        "impressions": 10,
         "ctr": 0,
-        "position": 24.8
+        "position": 27.1
       },
       {
         "keys": [
@@ -1035,9 +1044,9 @@
           "https://www.liangcaieyewear.com/blog/what-is-spliced-acetate.html"
         ],
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 5,
         "ctr": 0,
-        "position": 13
+        "position": 12.4
       },
       {
         "keys": [
@@ -1045,9 +1054,9 @@
           "https://www.liangcaieyewear.com/sunglass-frames/"
         ],
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 8,
         "ctr": 0,
-        "position": 7.8
+        "position": 14
       },
       {
         "keys": [
@@ -1078,6 +1087,16 @@
         "impressions": 2,
         "ctr": 0,
         "position": 3
+      },
+      {
+        "keys": [
+          "xy 206",
+          "https://www.liangcaieyewear.com/sunglass-frames/XY-206.html"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
       },
       {
         "keys": [
@@ -1156,17 +1175,17 @@
           "usa"
         ],
         "clicks": 8,
-        "impressions": 155,
-        "ctr": 5.16,
-        "position": 23.5
+        "impressions": 177,
+        "ctr": 4.52,
+        "position": 22.8
       },
       {
         "keys": [
           "chn"
         ],
-        "clicks": 1,
-        "impressions": 25,
-        "ctr": 4.0,
+        "clicks": 3,
+        "impressions": 27,
+        "ctr": 11.11,
         "position": 2.4
       },
       {
@@ -1174,18 +1193,18 @@
           "deu"
         ],
         "clicks": 1,
-        "impressions": 8,
-        "ctr": 12.5,
-        "position": 2.8
+        "impressions": 9,
+        "ctr": 11.11,
+        "position": 2.6
       },
       {
         "keys": [
           "ind"
         ],
         "clicks": 1,
-        "impressions": 7,
-        "ctr": 14.29,
-        "position": 25.7
+        "impressions": 8,
+        "ctr": 12.5,
+        "position": 23.6
       },
       {
         "keys": [
@@ -1246,9 +1265,9 @@
           "bra"
         ],
         "clicks": 0,
-        "impressions": 9,
+        "impressions": 10,
         "ctr": 0,
-        "position": 17.6
+        "position": 16
       },
       {
         "keys": [
@@ -1309,9 +1328,9 @@
           "fra"
         ],
         "clicks": 0,
-        "impressions": 9,
+        "impressions": 10,
         "ctr": 0,
-        "position": 17.1
+        "position": 16.3
       },
       {
         "keys": [
@@ -1426,9 +1445,9 @@
           "lka"
         ],
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0,
-        "position": 1
+        "position": 1.3
       },
       {
         "keys": [
@@ -1534,9 +1553,9 @@
           "sau"
         ],
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 5,
         "ctr": 0,
-        "position": 9.5
+        "position": 9.8
       },
       {
         "keys": [
@@ -1597,9 +1616,9 @@
           "twn"
         ],
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0,
-        "position": 4.5
+        "position": 17.3
       },
       {
         "keys": [
@@ -1616,19 +1635,19 @@
         "keys": [
           "DESKTOP"
         ],
-        "clicks": 9,
-        "impressions": 263,
-        "ctr": 3.42,
-        "position": 18.6
+        "clicks": 11,
+        "impressions": 290,
+        "ctr": 3.79,
+        "position": 18.2
       },
       {
         "keys": [
           "MOBILE"
         ],
         "clicks": 3,
-        "impressions": 75,
-        "ctr": 4.0,
-        "position": 13.7
+        "impressions": 79,
+        "ctr": 3.8,
+        "position": 13.9
       }
     ],
     "dates": [
@@ -1928,6 +1947,15 @@
         "impressions": 37,
         "ctr": 0,
         "position": 11.5
+      },
+      {
+        "keys": [
+          "2026-11-24"
+        ],
+        "clicks": 2,
+        "impressions": 31,
+        "ctr": 6.45,
+        "position": 15.4
       }
     ]
   },
